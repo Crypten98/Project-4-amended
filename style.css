@@ -283,9 +283,9 @@ a:hover {
     padding-left: 0;
 }
 
-#bloc-2-services p {
+/*#bloc-2-services p {
     font-size: 11px;
-}
+} */
 
 .navbar {
     margin-bottom: 0;
@@ -334,7 +334,7 @@ a:hover {
 
 .nav > li a:hover,
 .nav > li a:focus {
-    background: transparent;
+    /*background: transparent; */
 }
 
 .navbar-toggle {
@@ -640,7 +640,7 @@ a[data-lightbox]:hover img {
 }
 
 h1,
-h2,
+/*h2, */
 h3,
 h4,
 h5,
@@ -781,16 +781,16 @@ h4 {
 }
 
 .tc-white {
-    color: #364577!important;
+    color: #FFFFFF!important;
 }
 
 .btn-atomic-tangerine {
     background: #F3976C;
-    color: #FFFFFF!important;
+    color: black!important;
 }
 
-.btn-atomic-tangerine:hover {
-    background: #c27956!important;
+.btn-atomic-tangerine:hover, .btn-atomic-tangerine:focus {
+    background: #b85c31!important;
     color: #FFFFFF!important;
 }
 
@@ -798,15 +798,16 @@ h4 {
     color: #FFFFFF!important;
 }
 
-.ltc-white:hover {
+.ltc-white:hover, .ltc-white:focus {
     color: #cccccc!important;
 }
 
 .ltc-atomic-tangerine {
-    color: #F3976C!important;
+    color: #b85c31!important;
+    font-weight:600;
 }
 
-.ltc-atomic-tangerine:hover {
+.ltc-atomic-tangerine:hover, .ltc-atomic-tangerine:focus {
     color: #c27956!important;
 }
 
@@ -890,8 +891,8 @@ h4 {
     .bloc-fill-screen .fill-bloc-top-edge,
     .bloc-fill-screen .fill-bloc-bottom-edge {
         padding: 0 20px;
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
+        padding-left: env(safe-area-inset-left);
+        padding-right: env(safe-area-inset-right);
     }
 }
 
@@ -1045,4 +1046,42 @@ h4 {
     .bloc-mob-center-text {
         text-align: center;
     }
+}
+
+.visually-hidden {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.title {
+    font-size: 35px;
+}
+blockquote p{
+    font-size: 14px;
+}
+blockquote {
+    quotes: "\201C" "\201D" "\2018" "\2019";
+    margin: 0;
+    border: none;
+}
+blockquote p::before {
+    content: open-quote;
+}
+blockquote p::after {
+    content: close-quote;
+}
+.work-quote {
+    margin: 0 16px;
+}
+.current-page {
+    color: #B85C31!important;
+    font-weight: 600;
+}
+
+a:focus {
+    background-color: rgba(184, 92, 49, 0.5);
 }
